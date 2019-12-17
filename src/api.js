@@ -3,15 +3,11 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const SERVICE_KEY = process.env.ServiceKey;
 const CITY_CODE = 34010;
 
-const url = `http://openapi.tago.go.kr/openapi/service/ArvlInfoInqireService/getSttnAcctoArvlPrearngeInfoList?ServiceKey=${encodeURIComponent(
-    SERVICE_KEY
-)}`;
+const url = `http://openapi.tago.go.kr/openapi/service/ArvlInfoInqireService/getSttnAcctoArvlPrearngeInfoList?ServiceKey=zV8r1Gpj5ywiMiuWL%2F49HVJX33pia01Eg%2F3qlvACcEax7t3NODbr9Pjmc6gSUUnhSmR4n1caaiBN5XlKfOQNVw%3D%3D}`;
 
 export const getBusInfo = async nodeId => {
-    console.log(SERVICE_KEY);
     try {
         return await axios
             .get(url, {
