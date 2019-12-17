@@ -8,3 +8,5 @@ apiRouter.post("/yawoori", yawoori);
 apiRouter.post("/cheonan", cheonan);
 apiRouter.post("/sangmyung", sangmyung);
 apiRouter.post("/doojeong", doojeong);
+
+export default apiRouter;

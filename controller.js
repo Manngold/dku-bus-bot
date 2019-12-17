@@ -4,9 +4,8 @@ import textEditor from "./feature/textEditor";
 
 export const dankook = async (req, res) => {
     const { dankook } = nodeId;
-    const results = getBusInfo(dankook);
+    const results = await getBusInfo(dankook);
     const text = textEditor(results);
-
     const responseBody = {
         version: "2.0",
         template: {
@@ -24,7 +23,8 @@ export const dankook = async (req, res) => {
 
 export const sangmyung = async (req, res) => {
     const { sangmyung } = nodeId;
-    const results = getSangmyung(sangmyung);
+    const results = await getBusInfo(sangmyung);
+    const text = textEditor(results);
     const responseBody = {
         version: "2.0",
         template: {
@@ -42,7 +42,8 @@ export const sangmyung = async (req, res) => {
 
 export const yawoori = async (req, res) => {
     const { yawoori } = nodeId;
-    const yawoori = getYawoori(yawoori);
+    const results = await getBusInfo(yawoori);
+    const text = textEditor(results);
     const responseBody = {
         version: "2.0",
         template: {
@@ -60,7 +61,8 @@ export const yawoori = async (req, res) => {
 
 export const cheonan = async (req, res) => {
     const { cheonan } = nodeId;
-    const results = getCheonan(cheonan);
+    const results = await getBusInfo(cheonan);
+    const text = textEditor(results);
     const responseBody = {
         version: "2.0",
         template: {
@@ -78,7 +80,8 @@ export const cheonan = async (req, res) => {
 
 export const doojeong = async (req, res) => {
     const { doojeong } = nodeId;
-    const results = getDoojeong(doojeong);
+    const results = await getBusInfo(doojeong);
+    const text = textEditor(results);
     const responseBody = {
         version: "2.0",
         template: {
