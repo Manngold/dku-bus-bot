@@ -1,9 +1,12 @@
 import { getBusInfo } from "./api";
 import nodeId from "./nodeId";
+import textEditor from "./feature/textEditor";
 
 export const dankook = async (req, res) => {
     const { dankook } = nodeId;
     const results = getBusInfo(dankook);
+    const text = textEditor(results);
+
     const responseBody = {
         version: "2.0",
         template: {
