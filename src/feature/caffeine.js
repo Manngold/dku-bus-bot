@@ -1,3 +1,5 @@
+import app from "../app";
+
 const caffeine = () => {
     app.get("/", caffeineHandler);
 };
