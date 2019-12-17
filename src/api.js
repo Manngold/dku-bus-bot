@@ -27,6 +27,7 @@ export const getBusInfo = async nodeId => {
                         }
                     }
                 } = response;
+                console.log(item);
                 return item;
             });
     } catch (error) {
