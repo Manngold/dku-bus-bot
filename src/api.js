@@ -18,6 +18,7 @@ export const getBusInfo = async nodeId => {
                 }
             })
             .then(response => {
+                console.log(response.data.response);
                 const {
                     data: {
                         response: {
