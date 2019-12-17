@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const SERVICE_KEY = process.env.ServiceKey;
+const SERVICE_KEY = encodeURIComponent(process.env.ServiceKey);
 const CITY_CODE = 34010;
 
 const url = `http://openapi.tago.go.kr/openapi/service/ArvlInfoInqireService/getSttnAcctoArvlPrearngeInfoList?ServiceKey=${SERVICE_KEY}`;
