@@ -11,6 +11,7 @@ const url = `http://openapi.tago.go.kr/openapi/service/ArvlInfoInqireService/get
 )}`;
 
 export const getBusInfo = async nodeId => {
+    console.log(SERVICE_KEY);
     try {
         return await axios
             .get(url, {
