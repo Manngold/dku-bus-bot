@@ -9,7 +9,6 @@ const CITY_CODE = 34010;
 const url = `http://openapi.tago.go.kr/openapi/service/ArvlInfoInqireService/getSttnAcctoArvlPrearngeInfoList?ServiceKey=${SERVICE_KEY}`;
 
 export const getBusInfo = async nodeId => {
-    console.log(SERVICE_KEY);
     try {
         return await axios
             .get(url, {

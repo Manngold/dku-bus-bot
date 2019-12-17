@@ -5,9 +5,7 @@ import textEditor from "./feature/textEditor";
 export const dankook = async (req, res) => {
     const { dankook } = nodeId;
     const results = await getBusInfo(dankook);
-    console.log(results);
     const text = textEditor(results);
-    console.log(text);
     const responseBody = {
         version: "2.0",
         template: {
