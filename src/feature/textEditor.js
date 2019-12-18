@@ -9,9 +9,16 @@ const textEditor = data => {
             const {
                 routeno: busNum,
                 arrprevstationcnt: leftStation,
-                arrtime
+                arrtime,
+                routeid
             } = obj;
-            text += `${busNum}번 - ${
+            text += `${
+                busNum === 11
+                    ? routeid === "CAB285000006"
+                        ? `${busNum}(두정우남A)`
+                        : `${busNum}(두정한성A)`
+                    : `${busNum}`
+            }번 - ${
                 arrtime / 60 < 1 ? `곧 도착` : `${Math.round(arrtime / 60)}분`
             }, ${leftStation}정류장 전\n`;
         }
