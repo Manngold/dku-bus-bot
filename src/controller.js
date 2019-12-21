@@ -96,3 +96,22 @@ export const doojeong = async (req, res) => {
     };
     res.status(200).send(responseBody);
 };
+
+export const kumhoo = async (req, res) => {
+    const { kumhoo } = nodeId;
+    const results = await getBusInfo(kumhoo);
+    const text = textEditor(results);
+    const responseBody = {
+        version: "2.0",
+        template: {
+            outputs: [
+                {
+                    simpleText: {
+                        text
+                    }
+                }
+            ]
+        }
+    };
+    res.status(200).send(responseBody);
+};

@@ -4,7 +4,8 @@ const nodeId = {
     cheonan: "CAB285000678",
     yawoori: "CAB285000685",
     yawooriTwo: "CAB285010014",
-    sangmyung: "CAB285000642"
+    sangmyung: "CAB285000642",
+    kumhoo: "CAB285001049"
 };
 
 export default nodeId;

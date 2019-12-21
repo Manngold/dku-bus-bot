@@ -18,7 +18,6 @@ export const getBusInfo = async nodeId => {
                 }
             })
             .then(response => {
-                console.log(response.data.response);
                 const {
                     data: {
                         response: {
@@ -28,7 +27,6 @@ export const getBusInfo = async nodeId => {
                         }
                     }
                 } = response;
-                console.log(item);
                 return item;
             });
     } catch (error) {
